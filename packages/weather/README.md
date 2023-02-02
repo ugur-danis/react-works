@@ -1,4 +1,4 @@
-# Live Demo [Vercel](https://react-works-amber.vercel.app/)
+## [Live Demo](https://react-works-amber.vercel.app/)
 
 # Getting Started with Create React App
 
