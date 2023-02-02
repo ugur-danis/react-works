@@ -1,0 +1,1 @@
+export const getWeatherIcon = (iconId) => `http://openweathermap.org/img/wn/${iconId}@2x.png`;
