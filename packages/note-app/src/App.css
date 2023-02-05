@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+
+body {
+  background: #eee;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header .title {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.header .search-bar {
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 2px #ccc;
+}
+
+.new-note-footer {
+  width: 100%;
+  padding: inherit;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.new-note-container {
+  position: relative;
+  width: 100%;
+  height: 14rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 3px #ccc;
+  padding: 1rem;
+}
+
+.new-note-container textarea {
+  font-size: 16px;
+  width: 100% !important;
+  min-height: 6rem !important;
+  max-height: 8rem !important;
+  resize: none;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.new-note-color-list {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.new-note-color-list li {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+}
+
+.new-note-color-list li.selected-color {
+  position: relative;
+}
+
+.new-note-color-list li.selected-color::before {
+  z-index: 1;
+  content: '✔';
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+  font-weight: bold;
+}
+
+.add-button {
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #66f343;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hover-shrinkage-effect {
+  position: relative;
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.hover-shrinkage-effect:hover {
+  transform: scale(0.95);
+  filter: brightness(0.96);
+}
+
+.note-list-container {
+  max-width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.note-card {
+  height: 14rem;
+  box-shadow: 0px 0px 5px 2px #ccc;
+  animation: test 0.2s ease-in-out;
+}
+
+.note-delete {
+  animation: delete 0.2s ease-in-out;
+}
+
+@keyframes test {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes delete {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.note-card-header {
+  padding: 1rem;
+  height: 11rem;
+  color: #333;
+}
+
+.note-card-footer {
+  padding: 0.5rem;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-card-footer button {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.no-content-container {
+  width: 100%;
+  text-align: center;
+  color: #666;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .header .search-bar {
+    width: 100%;
+  }
+  .note-list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+    padding: 2rem;
+  }
+  .header .search-bar {
+    width: 20rem;
+  }
+  .note-list-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .note-list-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
