@@ -1,0 +1,68 @@
+[
+    {
+        "id": 0,
+        "name": "Big Mac",
+        "price": 2,
+        "img": "big-mac.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Airpods",
+        "price": 199,
+        "img": "airpods.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Air Jordans",
+        "price": 125,
+        "img": "air-jordans.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Amazon Echo",
+        "price": 99,
+        "img": "amazon-echo.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Book",
+        "price": 15,
+        "img": "book.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Flip Flops",
+        "price": 3,
+        "img": "flip-flops.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Video Game",
+        "price": 60,
+        "img": "video-game.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Year of Netflix",
+        "price": 100,
+        "img": "year-of-netflix.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Coca Cola Pack",
+        "price": 5,
+        "img": "coca-cola-pack.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Tesla",
+        "price": 75000,
+        "img": "tesla.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Monster Truck",
+        "price": 150000,
+        "img": "monster-truck.jpg"
+    }
+]

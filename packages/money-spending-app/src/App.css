@@ -1,0 +1,251 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Roboto, sans-serif;
+  }
+
+  table {
+      border-collapse: collapse;
+  }
+
+  button {
+      border: none;
+      cursor: pointer;
+  }
+
+  button:disabled {
+      cursor: not-allowed;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+      -moz-appearance: textfield;
+  }
+
+  body {
+      background-color: #eee;
+  }
+
+  .container {
+      width: 68%;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+  }
+
+  .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 16rem;
+      padding: 1rem;
+      background-color: #fff;
+      margin-bottom: 0.6rem;
+  }
+
+  .avatar {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 100%;
+      margin-bottom: 1.5rem;
+  }
+
+  .money-bar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      text-align: center;
+      color: #fff;
+      padding: 1.5rem;
+      background: linear-gradient(180deg, #2ecc71, #1abc9c);
+  }
+
+  .content {
+      padding: 0.6rem 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 10px 10px;
+  }
+
+  .product {
+      width: 100%;
+      max-width: 100%;
+      font-size: 18px;
+      text-align: center;
+      padding: 20px 15px;
+      background-color: #fff;
+  }
+
+  .product img {
+      height: 5rem;
+      margin-bottom: 1rem;
+  }
+
+  .product h3 {
+      color: #333;
+  }
+
+  .product h4 {
+      font-weight: 500;
+      font-size: 20px;
+      color: #24c486;
+  }
+
+  .product-footer {
+      margin-top: 1.2rem;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+  }
+
+  .product-footer button {
+      flex: 1;
+      height: 2.5rem;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+  }
+
+  .product-footer button:disabled {
+      flex: 1;
+      color: #333;
+      background: #f1f2f6;
+  }
+
+  .sell-btn {
+      background: linear-gradient(180deg, #f53b82, #f53b57);
+      color: #fff;
+  }
+
+  .buy-btn {
+      color: #fff;
+      background: linear-gradient(180deg, #2ecc71, #1abc9c);
+  }
+
+  .product-footer input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 0 8px;
+      text-align: center;
+      width: 6rem;
+      height: 2.5rem;
+      margin: 0 10px;
+  }
+
+  .receipt-container {
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      padding: 2rem 0;
+  }
+
+  .receipt-header {
+      margin-bottom: 1rem;
+      color: #333;
+  }
+
+  .receipt-table {
+      margin: 0 auto;
+      font-size: 18px;
+  }
+
+  .receipt-table tr {
+      text-align: start;
+  }
+
+  .receipt-table tr th {
+      color: #333;
+  }
+
+  .receipt-table tr td {
+      width: 4rem;
+      color: #333;
+      font-weight: 500;
+  }
+
+  .receipt-table .product-name {
+      width: 10rem;
+  }
+
+  .receipt-table .product-price {
+      text-align: end;
+      color: #24c486;
+      font-weight: bold;
+  }
+
+  .receipt-table-footer-hr td {
+      padding: 0.5rem 0;
+  }
+
+  .receipt-table-footer-hr hr {
+      height: 1px;
+      background-color: #000;
+      border-width: 0px;
+  }
+
+  .receipt-table-footer th {
+      text-align: start;
+  }
+
+  .receipt-table-footer td {
+      color: #24c486 !important;
+      text-align: end;
+  }
+
+  @media only screen and (max-width: 599px) {
+      .container {
+          width: 100%;
+          padding: 0 1rem;
+          padding-bottom: 1rem;
+      }
+
+      .header h1 {
+        font-size: 1.45em;
+      }
+
+      .content {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+  }
+
+  @media only screen and (min-width: 600px) {
+      .container {
+          width: 100%;
+      }
+
+      .content {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .container {
+          width: 100%;
+      }
+
+      .content {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+  }
+
+
+  @media only screen and (min-width: 1100px) {
+      .container {
+          width: 68%;
+      }
+
+      .content {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+  }
