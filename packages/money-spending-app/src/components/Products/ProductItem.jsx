@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct, basketSelector } from "../../store/basketSlice";
 import { toCurrency } from '../../utils/formats';
@@ -10,13 +10,21 @@ export const ProductItem = ({ product }) => {
     const [maxAmount, setMaxAmount] = useState(0);
     const { money } = useSelector(basketSelector);
 
-    useEffect(() => {
+    const calcMaxAmount = useCallback(() => {
         setMaxAmount(Math.floor(parseInt(money + (product.price * amount)) / product.price));
-    }, [money]);
+    }, [setMaxAmount, money, product, amount]);
+
+    const handleChangeAmount = useCallback(() => {
+        dispatch(addProduct({ ...product, amount }));
+    }, [dispatch, product, amount]);
 
     useEffect(() => {
-        dispatch(addProduct({ ...product, amount }));
-    }, [amount]);
+        calcMaxAmount();
+    }, [money, calcMaxAmount]);
+
+    useEffect(() => {
+        handleChangeAmount();
+    }, [amount, handleChangeAmount]);
 
     const canBuy = newAmount => newAmount < maxAmount;
 
@@ -45,7 +53,7 @@ export const ProductItem = ({ product }) => {
     return (
         <div className="product">
             <div className="product-content">
-                <img src={getProductImg(product.img)} />
+                <img src={getProductImg(product.img)} alt={product.img} />
                 <h3>{product.name}</h3>
                 <h4>{toCurrency(product.price)}</h4>
             </div>
