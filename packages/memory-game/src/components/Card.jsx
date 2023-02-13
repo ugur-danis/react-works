@@ -1,10 +1,6 @@
-const Card = ({ data }) => {
-
-    const handleClickCard = e => {
-    };
-
+const Card = ({ data, handleClickCard }) => {
     return (
-        <div className={`flip-card ${data.flipped ? 'flipped' : ''}`} onClick={handleClickCard}>
+        <div className={`flip-card ${data.flipped || data.matched ? 'flipped' : ''}`} onClick={e => handleClickCard(e, data)}>
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     ?
